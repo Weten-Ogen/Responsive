@@ -1,0 +1,76 @@
+body{
+    background:linear-gradient(to right, rgb(50, 146, 195), rgb(230, 10, 10));
+
+}
+#container{
+    background:linear-gradient(to right, rgb(0, 0, 0), rgb(42, 43, 50)); 
+    overflow: hidden;
+    
+    
+}
+#container a{
+    display: block;
+    text-decoration: none;
+    padding: 2px 4px  5px 11px;
+    border-radius: 10px;
+    outline: none;
+    font: 600 2rem "Raleway";
+    float: left;
+    letter-spacing: 0.05em;
+}
+
+a:hover{
+    background:linear-gradient(to right, rgb(225, 20, 20), rgb(29, 116, 170)); 
+    border-radius: 10px;
+}
+
+#container, a.active{
+    background-color:rgb(200, 106, 106);
+}
+
+#container , a:focus {
+    background-color:rgb(202, 28, 28);
+    border-radius: 10px;
+}
+
+#container #icon{
+    display: none;
+    cursor:pointer;
+}
+
+@media screen and (max-width:500px){
+    body{
+        background:linear-gradient(to right, rgb(206, 183, 34), rgb(5, 133, 118));
+        padding: 0;
+    }
+
+    #container a:not(:first-child) {
+        display: none;
+    }
+
+
+    #container #icon{
+        float: right;
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:500px){
+    #container.responsive{
+        position: relative;
+    }
+
+    #container.responsive #icon{
+        position : absolute;
+        right :0;
+        top: 0;
+    } 
+
+    #container.responsive a {
+        float:none;
+        display: block;
+        text-align: left;
+    }
+
+}
